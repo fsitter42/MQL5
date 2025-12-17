@@ -42,28 +42,27 @@ python swaparb_master.py
 
 **Python Config (swaparb_master.py)**
 
-SYMBOLS = ["EURUSD", "GBPUSD", "AUDUSD"]  # Muss EA entsprechen!
-MIN_SWAP_DIFF = 0.5  # Min. Vorteil pro Lot/Tag
+SYMBOLS = ["EURUSD", "GBPUSD", "AUDUSD"]  # Muss EA entsprechen!  
+MIN_SWAP_DIFF = 0.5  # Min. Vorteil pro Lot/Tag  
 MAX_LOTS = 1.0       # Max Position pro Symbol
-
 
 **✅ Test-Checklist**
 
-[ ] MT5 Terminal A läuft → Experts Tab: "12 Symbole gestartet"
-[ ] MT5 Terminal B läuft → Experts Tab: "12 Symbole gestartet"  
-[ ] ~/.SwapArb/ Ordner existiert → status_*.json erscheinen (alle 30s)
-[ ] Python Log: "5 Symbole Broker A" + "5 Symbole Broker B"
-[ ] Python Log: "💰 EURUSD: Swap-Diff 0.750 → Commands geschickt"
-[ ] MT5 Logs: "✅ BUY 0.5 EURUSD ausgeführt"
+[ ] MT5 Terminal A läuft → Experts Tab: "12 Symbole gestartet"  
+[ ] MT5 Terminal B läuft → Experts Tab: "12 Symbole gestartet"    
+[ ] ~/.SwapArb/ Ordner existiert → status_*.json erscheinen (alle 30s)  
+[ ] Python Log: "5 Symbole Broker A" + "5 Symbole Broker B"  
+[ ] Python Log: "💰 EURUSD: Swap-Diff 0.750 → Commands geschickt"  
+[ ] MT5 Logs: "✅ BUY 0.5 EURUSD ausgeführt"  
 
 **🛡️ Sicherheits- / Risiko-Settings**
 
-swaparb_master.py anpassen:
-MAX_LOTS = 0.01      # Demo: Micro-Lots nur!
-MIN_SWAP_DIFF = 1.0  # Nur starke Arbitrage
-Margin-Check: lots = min(MAX_LOTS, margin/2000)
+swaparb_master.py anpassen:  
+MAX_LOTS = 0.01      # Demo: Micro-Lots nur!  
+MIN_SWAP_DIFF = 1.0  # Nur starke Arbitrage  
+Margin-Check: lots = min(MAX_LOTS, margin/2000)  
 
 **📊 Monitoring**
 
-tail -f ~/.SwapArb/*.json    # Linux: Live Dateien
+tail -f ~/.SwapArb/*.json    # Linux: Live Dateien  
 Oder Python Logs beobachten
