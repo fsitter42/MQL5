@@ -35,9 +35,13 @@ python swaparb_master.py
 **📁 Dateistruktur (automatisch)**
 
 ~/.SwapArb/ (oder C:\Users\[Name]\SwapArb\)
+
 ├── status_BROKER_A.json     ← EA A schreibt (alle 30s)
+
 ├── status_BROKER_B.json     ← EA B schreibt (alle 30s)
+
 ├── commands_BROKER_A.json   ← Python → EA A
+
 └── commands_BROKER_B.json   ← Python → EA B
 
 **Python Config (swaparb_master.py)**
