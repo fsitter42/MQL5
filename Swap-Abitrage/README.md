@@ -23,9 +23,9 @@ TERMINAL B:
 - Gleiche SYMBOL_PREFIX
 
 **3. Python Server**
-# Windows/Linux Terminal
+Windows/Linux Terminal
 pip install flask pathlib
-# Code in swaparb_master.py speichern
+Code in swaparb_master.py speichern
 python swaparb_master.py
 
 **📁 Dateistruktur (automatisch)**
@@ -50,11 +50,11 @@ MAX_LOTS = 1.0       # Max Position pro Symbol
 [ ] MT5 Logs: "✅ BUY 0.5 EURUSD ausgeführt"
 
 **🛡️ Sicherheits- / Risiko-Settings**
-# swaparb_master.py anpassen:
+swaparb_master.py anpassen:
 MAX_LOTS = 0.01      # Demo: Micro-Lots nur!
 MIN_SWAP_DIFF = 1.0  # Nur starke Arbitrage
-# Margin-Check: lots = min(MAX_LOTS, margin/2000)
+Margin-Check: lots = min(MAX_LOTS, margin/2000)
 
 **📊 Monitoring**
 tail -f ~/.SwapArb/*.json    # Linux: Live Dateien
-# Oder Python Logs beobachten
+Oder Python Logs beobachten
